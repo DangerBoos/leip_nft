@@ -1,10 +1,6 @@
 import pandas as pd
 import numpy as np
 from collections import defaultdict
-import math
-from random import randrange
-from scipy.stats import uniform
-import random
 nft_count = 10000
 main = True #if false run with all attributes
 minor_variations = [x.lower().replace(' ', '_') for x in
@@ -116,8 +112,6 @@ character_type_pct_dict = {'male_punk': 10,
 char_field = []
 for k,v in character_type_pct_dict.items():
     char_field.extend([k]*int(v*nft_count/100))
-
-
 
 df['character_type']=char_field
 import random
